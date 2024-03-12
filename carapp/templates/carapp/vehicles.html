@@ -1,0 +1,9 @@
+{% extends 'carapp/base.html' %}
+{% block body_block %}
+    {% for vehicle in vehicles_all %}
+        <li>{{ vehicle }}</li>
+    {% endfor %}
+    {{ form }}
+    <a href="{% url 'carapp:orderhere' %}">ORDER HERE</a>
+
+{% endblock %}

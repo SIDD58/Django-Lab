@@ -1,0 +1,26 @@
+{% extends 'carapp/base.html' %}
+
+
+{% block body_block %}
+
+    <h2>{{ msg }}</h2>
+    {% if vehiclelist %}
+<h2> List Of Vehicles </h2>
+<ol>
+	{% for car in vehiclelist %}
+
+<li> <p> {{car.car_name  }} {{ car.car_price | floatformat:2 }}</p>   </li>
+{% endfor %}
+</ol>
+{% else %}
+<strong> None of the car types is available! </strong>
+{% endif %}
+    <h3> You can place your order here.</h3>
+
+    <form method="post" action="{% url 'carapp:orderhere' %}" >
+    {% csrf_token %}
+    <table>{{ form.as_table }} </table>
+    <input value="submit" type="submit">
+    </form>
+
+{% endblock %}

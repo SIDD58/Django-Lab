@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group Detail</title>
+</head>
+<body>
+{% for member in members %}
+    <h3>{{ member.first_name}}</h3>
+    <p>
+    First Name: {{member.first_name}} <br>
+    Last Name: {{member.last_name}} <br>
+    Semester: {{ member.semester|stringformat:"s" }} <br>
+    Professional Page: <a href="{{ member.personal_page }}">{{ member.personal_page }}</a> <br>
+    </p>
+
+{% endfor %}
+
+</body>
+</html>

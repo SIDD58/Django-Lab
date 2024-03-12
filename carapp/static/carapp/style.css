@@ -1,0 +1,43 @@
+.hbar1 {
+ 			display: inline;
+ 			margin: 15px;
+			}
+h1 {
+    background-color: #f5f5f5 ; /* Default background color */
+    color: #333; /* Default text color */
+    font-size: 24px; /* Default font size */
+    font-family: Arial, sans-serif; /* Default font family */
+    font-style: normal; /* Default font style (normal, italic, oblique) */
+    font-weight: bold; /* Default font weight (normal, bold) */
+    text-align: center; /* Default text alignment */
+}
+
+
+.inline-container {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #ddd;
+    color: black;
+}

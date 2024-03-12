@@ -1,0 +1,10 @@
+{% extends 'carapp/base.html' %}
+{% block body_block %}
+    <form action="", method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="Submit" value="Filter Cars">
+    </form>
+    <h2>{{ result_string }}</h2>
+    {{ car_price }}
+{% endblock %}

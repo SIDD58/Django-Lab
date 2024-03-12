@@ -1,0 +1,10 @@
+{% extends 'carapp/base.html' %}
+{% block body_block %}
+    Following are the Vehicles in {{cartype.name}} with Cartype No {{ cartype.id }}:
+<ul>
+{% for i in vehicles %}
+    <li>{{ i.car_name }}</li>
+{% endfor %}
+</ul>
+<p><a href="{% url 'carapp:homepage'%}" >BACK TO HOME PAGE</a></p>
+{% endblock %}
